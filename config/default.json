@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://luka31:lepjedan123@newcluster.fclcg.mongodb.net/socialnetwork?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://luka31:lepjedan123@newcluster.fclcg.mongodb.net/socialnetwork?retryWrites=true&w=majority",
+    "jwtSecret" : "mysecrettoken"
 }
