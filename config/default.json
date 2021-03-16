@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://luka31:lepjedan123@newcluster.fclcg.mongodb.net/socialnetwork?retryWrites=true&w=majority",
-    "jwtSecret" : "mysecrettoken"
+    "jwtSecret" : "mysecrettoken",
+    "githubClientId" : "84ae9710b77234463de5",
+    "githubSecret": "2c56049ba1e2e503982566c57bf156697b7c95e6 "
 }
