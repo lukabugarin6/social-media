@@ -25,7 +25,6 @@
   overflow: hidden;
 }
 
-
 .button::after {
   border-radius: 8px;
   content: '';
