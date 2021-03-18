@@ -38,7 +38,7 @@
   z-index:-1;
   transform: scaleX(0);
   transform-origin: right;
-  transition: all ease-in-out 400ms;
+  transition: all ease-in-out 300ms;
 }
 
 .button:hover::after {
