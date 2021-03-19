@@ -8,7 +8,7 @@ const Login = () => {
     password: "",
   });
 
-  const {  email, password } = formData;
+  const { email, password } = formData;
 
   const changeHandler = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,7 +45,7 @@ const Login = () => {
         <input type="submit" value="Login" />
       </form>
       <p>
-        Dont have an account? <Link to="/register">Sign In</Link>
+        Dont have an account? <Link to="/register">Register</Link>
       </p>
     </div>
   );

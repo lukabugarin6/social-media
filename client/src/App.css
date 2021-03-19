@@ -10,11 +10,10 @@
 
 .landing {
   height: 100vh;
-  background: rgb(185,167,218);
-  background: linear-gradient(125deg, rgba(185,167,218,1) 0%, rgba(157,213,242,0) 20%),
-              linear-gradient(15deg, rgba(185,167,218,1) 0%, rgba(157,213,242,0) 40%),
-              linear-gradient(70deg, rgba(157,213,242,0) 65%, rgb(248, 249, 255) 100%),
-              radial-gradient(circle, rgba(183,212,226,1) 0%, rgba(132,209,239,1) 100%);
+  background: linear-gradient(125deg, rgba(185,167,218,1) 0%, transparent 20%),
+              linear-gradient(15deg, rgba(185,167,218,1) 0%, transparent 40%),
+              linear-gradient(70deg, transparent 65%, rgba(248, 249, 255,1) 100%),
+              radial-gradient(circle, rgb(204, 219, 227) 0%,rgba(183,212,226,1) 20%, rgba(132,209,239,1) 100%);
 }
 
 .button {
@@ -23,7 +22,9 @@
   position: relative;
   z-index: 5;
   overflow: hidden;
+  transition: all .15s;
 }
+
 
 .button::after {
   border-radius: 8px;
@@ -38,6 +39,10 @@
   transform: scaleX(0);
   transform-origin: right;
   transition: all ease-in-out 300ms;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
 
 .button:hover::after {
