@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
        fontFamily: {
-        'primary' : ['']
+        'primary' : ['Karla'],
+        'secondary': ['Lato']
       },
       colors: {
         'primary' : '#5680E9',

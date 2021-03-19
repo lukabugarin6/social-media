@@ -10,13 +10,12 @@
 .alert { 
   padding: .8rem;
   margin: 1rem 0;
-  
 }
 .alert-danger { color: #F78888;}
 .alert-success {color: #8EE4AF;}
 
 .landing {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(125deg, rgba(185,167,218,1) 0%, transparent 20%),
               linear-gradient(15deg, rgba(185,167,218,1) 0%, transparent 40%),
               linear-gradient(70deg, transparent 65%, rgba(248, 249, 255,1) 100%),

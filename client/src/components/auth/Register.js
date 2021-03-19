@@ -45,59 +45,67 @@ const Register = ({ setAlert }) => {
   };
 
   return (
-    <div className="pt-96 landing pl-96">
-      <h1>Sign Up</h1>
-      <p>Create Your Account</p>
+    <div className="landing flex justify-center items-center">
+      <div className="form-card rounded-lg p-8 text-white">
+      <h1 className='text-3xl text-center font-medium'>Create Your Account Now For Free</h1>
       <Alert />
       <form onSubmit={(e) => submitHandler(e)}>
-        <div>
+        <div className='flex flex-col gap-y-6 pt-12'> 
+
+        <div className='flex flex-col'>
           <input
             type="text"
             placeholder="Name"
+            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-sm'
             value={name}
             onChange={(e) => changeHandler(e)}
             name="name"
             required
           />
         </div>
-        <div>
+        <div className='flex flex-col relative'>
           <input
             type="email"
             placeholder="Email Address"
+            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-sm'
             value={email}
             onChange={(e) => changeHandler(e)}
             name="email"
           />
-          <small>
+          <small className='text-xs absolute bottom-0 transform translate-y-full font-medium'>
             This site uses Gravatar so if you want a profile image use a
             gravatar email
           </small>
         </div>
-        <div>
+        <div className='flex flex-col'>
           <input
             type="password"
             placeholder="Password"
+            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-sm'
             name="password"
             value={password}
             onChange={(e) => changeHandler(e)}
             minLength="6"
           />
         </div>
-        <div>
+        <div  className='flex flex-col'>
           <input
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
+            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-sm'
             value={confirmPassword}
             onChange={(e) => changeHandler(e)}
             minLength="6"
           />
         </div>
-        <input type="submit" value="Register" />
+        <button type="submit" className='button text-white rounded-lg font-medium py-3.5 w-24 text-center cursor-pointer'>Register</button>
+        </div>
       </form>
-      <p>
-        Already have an account? <Link to="/login">Sign In</Link>
+      <p className='text-sm mt-4'>
+        Already have an account? <Link to="/login" className='transition-all duration-300 text-quinary font-semibold hover:text-primary'>Sign In</Link>
       </p>
+      </div>
     </div>
   );
 };
