@@ -12,7 +12,7 @@ module.exports = {
         'tertiary' : '#5AB9EA',
         'quaternary' : '#C1C8E4',
         'quinary' : '#8860D0',
-        'error' : '#F78888',
+        'danger' : '#F78888',
         'success': '#8EE4AF'
       },
     },

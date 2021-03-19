@@ -5,8 +5,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Karla';
-
 }
+
+.alert { 
+  padding: .8rem;
+  margin: 1rem 0;
+  
+}
+.alert-danger { color: #F78888;}
+.alert-success {color: #8EE4AF;}
 
 .landing {
   height: 100vh;
