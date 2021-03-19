@@ -103,7 +103,7 @@ const Register = ({ setAlert }) => {
         </div>
       </form>
       <p className='text-sm mt-4'>
-        Already have an account? <Link to="/login" className='transition-all duration-300 text-quinary font-semibold hover:text-primary'>Sign In</Link>
+        Already have an account? <Link to="/login" className='redirect-btn relative transition-all duration-300 text-quinary font-semibold hover:text-primary'>Sign In</Link>
       </p>
       </div>
     </div>

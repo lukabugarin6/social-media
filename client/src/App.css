@@ -31,6 +31,23 @@
   transition: all .15s;
 }
 
+.redirect-btn::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #5680E9;
+  left: 0;
+  bottom: -1px;
+  transition: transform .3s;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+
+.redirect-btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 .button::after {
   border-radius: 8px;

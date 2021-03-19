@@ -50,7 +50,7 @@ const Login = () => {
       </div>
       </form>
       <p className='text-sm mt-4'>
-        Dont have an account? <Link to="/register" className='transition-all duration-300 text-quinary font-semibold hover:text-primary'>Register</Link>
+        Dont have an account? <Link to="/register" className='redirect-btn relative transition-all duration-300 text-quinary font-semibold hover:text-primary'>Register</Link>
       </p>
       </div>
     </div>
