@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <div className="landing flex justify-center items-center">
-      <div className='form-card rounded-lg p-8 text-white'>
+      <div className='form-card rounded-lg p-8 text-white' style={{backgroundColor:"rgba(255,255,255,0.1)"}}>
       <h1 className='text-3xl text-center font-medium'>Sign Into Your Account</h1>
       <form onSubmit={e => submitHandler(e)}>
       <div className='flex flex-col gap-y-6 pt-12'> 
@@ -30,7 +30,7 @@ const Login = () => {
             type="email"
             placeholder="Email Address"
             value={email}
-            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-sm'
+            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-lg'
             onChange={(e) => changeHandler(e)}
             name="email"
           />
@@ -40,13 +40,13 @@ const Login = () => {
             type="password"
             placeholder="Password"
             name="password"
-            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-sm'
+            className='bg-quaternary text-white placeholder-white pl-3.5 py-3.5 rounded-lg'
             value={password}
             onChange={(e) => changeHandler(e)}
             minLength="6"
           />
         </div>
-        <button className='button text-white rounded-lg font-medium py-3.5 w-24 text-center cursor-pointer' type="submit">Login</button>
+        <button className='button text-white origin-left rounded-lg font-medium py-3.5 w-24 text-center cursor-pointer' type="submit">Login</button>
       </div>
       </form>
       <p className='text-sm mt-4'>
