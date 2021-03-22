@@ -7,7 +7,8 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAIL
+  LOGIN_FAIL,
+  LOGOUT
 } from "./types";
 
 // Load User
@@ -56,7 +57,7 @@ export const register = ({ name, email, password }) => async (dispatch) => {
     dispatch({
       type: REGISTER_FAIL,
     });
-    
+
     dispatch(loadUser())
   }
 };
@@ -92,3 +93,7 @@ export const login = ( email, password ) => async (dispatch) => {
   }
 };
 
+// Logout / Clear Profile
+export const logout = () => dispatch => {
+  dispatch({ type: LOGOUT });
+}
