@@ -1,9 +1,11 @@
 import React, { useEffect, Fragment } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Loading from "../layout/Loading";
-import DashboardActions from './DashboardActions';
+import DashboardActions from "./DashboardActions";
+import Experience from "./Experience";
+import Education from "./Education";
 import { getCurrentProfile } from "../../actions/profile";
 
 const Dashboard = ({
@@ -23,13 +25,15 @@ const Dashboard = ({
           <h1>Dashboard</h1>
           <p>Welcome {user && user.name}</p>
           {profile !== null ? (
-            <Fragment><DashboardActions /></Fragment>
+            <Fragment>
+              <DashboardActions />
+              <Experience experience={profile.experience} />
+              <Education education={profile.education} />
+            </Fragment>
           ) : (
             <Fragment>
               <p>You have not yet setup a profile, please add some info</p>
-              <Link to="/create-profile">
-                Create Profile
-              </Link>
+              <Link to="/create-profile">Create Profile</Link>
             </Fragment>
           )}
         </Fragment>
