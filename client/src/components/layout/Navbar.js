@@ -8,9 +8,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul className="flex justify-center w-full absolute left-0 w-full text-center text-quinary gap-x-10 text-lg">
       <li>
-        <a onClick={logout} href="#!">
+        <Link onClick={logout} to="#!">
           Logout
-        </a>
+        </Link>
       </li>
     </ul>
   );
