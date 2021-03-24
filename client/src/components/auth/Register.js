@@ -55,7 +55,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     <div className="landing flex justify-center items-center">
       <div
         className="form-card rounded-lg p-8 text-white"
-        style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+        style={{ backgroundColor: "rgba(255,255,255,0.1)" ,border:'1px solid #fff'}}
       >
         <h1 className="text-3xl text-center font-medium">
           Create Your Account Now For Free
