@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import Loading from "../layout/Loading";
 import { getProfileById } from "../../actions/profile";
 import { Link } from "react-router-dom";
+import ProfileTop from './ProfileTop';
+import ProfileAbout from './ProfileAbout';
 
 const Profile = ({
   getProfileById,
@@ -19,6 +21,8 @@ const Profile = ({
       {profile === null || loading ? (
         <Loading />
       ) : (
+          <Fragment>
+
         <div className="pt-40">
           <Link to="/profiles" className="">
             Back To Profiles
@@ -29,6 +33,11 @@ const Profile = ({
               <Link to="/edit-profile">Edit Profile</Link>
             )}
         </div>
+        <div>
+            <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
+        </div>
+          </Fragment>
       )}
     </Fragment>
   );
