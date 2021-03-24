@@ -2,7 +2,7 @@ import React, { useState, Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const initialState = {
   company: "",
@@ -31,21 +31,21 @@ const EditProfile = ({
     getCurrentProfile();
 
     setFormData({
-        company: loading || !profile.company ? '' : profile.company,
-        website: loading || !profile.website ? '' : profile.website,
-        location: loading || !profile.location ? '' : profile.location,
-        status: loading || !profile.status ? '' : profile.status,
-        skills: loading || !profile.skills ? '' : profile.skills.join(','),
-        githubusername: loading || !profile.githubusername ? '' : profile.githubusername,
-        bio: loading || !profile.bio ? '' : profile.bio,
-        twitter: loading || !profile.twitter ? '' : profile.twitter,
-        facebook: loading || !profile.facebook ? '' : profile.facebook,
-        linkedin: loading || !profile.linkedin ? '' : profile.linkedin,
-        youtube: loading || !profile.youtube ? '' : profile.youtube,
-        instagram: loading || !profile.instagram ? '' : profile.instagram,
-
-    })
-  },[loading])
+      company: loading || !profile.company ? "" : profile.company,
+      website: loading || !profile.website ? "" : profile.website,
+      location: loading || !profile.location ? "" : profile.location,
+      status: loading || !profile.status ? "" : profile.status,
+      skills: loading || !profile.skills ? "" : profile.skills.join(","),
+      githubusername:
+        loading || !profile.githubusername ? "" : profile.githubusername,
+      bio: loading || !profile.bio ? "" : profile.bio,
+      twitter: loading || !profile.twitter ? "" : profile.twitter,
+      facebook: loading || !profile.facebook ? "" : profile.facebook,
+      linkedin: loading || !profile.linkedin ? "" : profile.linkedin,
+      youtube: loading || !profile.youtube ? "" : profile.youtube,
+      instagram: loading || !profile.instagram ? "" : profile.instagram,
+    });
+  }, [loading, getCurrentProfile, profile]);
 
   const {
     company,
@@ -253,5 +253,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
-  withRouter(EditProfile)
+  EditProfile
 );

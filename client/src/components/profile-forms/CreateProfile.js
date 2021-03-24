@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile } from '../../actions/profile';
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const initialState = {
     company: '',
@@ -222,4 +222,4 @@ CreateProfile.propTypes = {
 };
 
 
-export default connect(null, { createProfile })(withRouter(CreateProfile));
+export default connect(null, { createProfile })(CreateProfile);

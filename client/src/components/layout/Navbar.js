@@ -15,13 +15,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     </ul>
   );
 
-  const guestLinks = (
-    <ul className="flex justify-center w-full absolute left-0 w-full text-center text-quinary gap-x-10 text-lg">
-      <li className="">Profiles</li>
-      <li>Register</li>
-      <li>Login</li>
-    </ul>
-  );
+  // const guestLinks = (
+  //   <ul className="flex justify-center w-full absolute left-0 w-full text-center text-quinary gap-x-10 text-lg">
+  //     <li className="">Profiles</li>
+  //     <li>Register</li>
+  //     <li>Login</li>
+  //   </ul>
+  // );
 
   return (
     <header className="absolute w-full">

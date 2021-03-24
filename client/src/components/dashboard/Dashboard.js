@@ -16,7 +16,7 @@ const Dashboard = ({
 }) => {
   useEffect(() => {
     getCurrentProfile();
-  }, []);
+  }, [getCurrentProfile]);
   return (
     <div className="landing px-40 py-8 flex items-end pb-32">
       {loading && profile === null ? (
