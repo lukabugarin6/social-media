@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getPosts } from "../../actions/post";
 import Loading from "../layout/Loading";
 import PostItem from './PostItem'
+import PostForm from "./PostForm";
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <div className="landing flex flex-col pt-0 text-white justify-center items-center">
       {loading ? <Loading /> : (<Fragment><h1>Posts</h1><p>Welcome to the community</p>
       {/* PostForm */}
+      <PostForm />
       <div className="posts">
           {posts && posts.map(post => (
               <PostItem key={post._id} post={post} />
