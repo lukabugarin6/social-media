@@ -30,7 +30,7 @@ const Login = ({ login, isAuthenticated }) => {
     <div className="landing flex justify-center items-center">
       <div
         className="form-card rounded-lg p-8 text-white"
-        style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+        style={{ backgroundColor: "rgba(255,255,255,0.1)", border:'1px solid #fff' }}
       >
         <h1 className="text-3xl text-center font-medium">
           Sign Into Your Account
@@ -70,7 +70,7 @@ const Login = ({ login, isAuthenticated }) => {
           Dont have an account?{" "}
           <Link
             to="/register"
-            className="redirect-btn relative transition-all duration-300 text-quinary font-semibold hover:text-primary"
+            className="redirect-btn relative transition-all duration-300 text-lg text-quinary font-medium hover:text-secondary"
           >
             Register
           </Link>

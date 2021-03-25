@@ -18,28 +18,51 @@ const Dashboard = ({
     getCurrentProfile();
   }, [getCurrentProfile]);
   return (
-    <div className="landing px-40 py-8 flex items-end pb-32">
+    <div className="landing px-40 py-8 flex justify-center items-center">
       {loading && profile === null ? (
         <Loading />
       ) : (
         <Fragment>
-          <h1>Dashboard</h1>
-          <p>Welcome {user && user.name}</p>
           {profile !== null ? (
             <Fragment>
               <DashboardActions />
               <Experience experience={profile.experience} />
               <Education education={profile.education} />
-            
-              <div className='my-2'>
-                <button onClick={() => deleteAccount()}>Delete My Account</button>
+
+              <div className="my-2">
+                <button onClick={() => deleteAccount()}>
+                  Delete My Account
+                </button>
               </div>
             </Fragment>
           ) : (
-            <Fragment>
-              <p>You have not yet setup a profile, please add some info</p>
-              <Link to="/create-profile">Create Profile</Link>
-            </Fragment>
+            // <div
+            //   className="no-profile-screen absolute w-full h-full flex justify-center items-center"
+            //   style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+            // >
+            <div
+              className="no-profile-screen__inner flex flex-col justify-end rounded-lg p-8 text-white w-2/5 text-center"
+              style={{
+                backgroundColor: "rgba(255,255,255,0.1)",
+                border: "1px solid #fff",
+              }}
+            >
+              <p className="text-6xl font-medium my-2">
+                Welcome {user && user.name}!
+              </p>
+              <p className="text-4xl font-medium">
+                You have not yet setup a profile, please add some info.
+              </p>
+              <div className="buttons mt-8">
+                <button className="button text-white rounded-lg font-medium py-3.5 w-32 text-center cursor-pointer">
+                  <Link to="/create-profile">Create Profile</Link>
+                </button>
+                <button className="button text-white rounded-lg mx-4 my-6 font-medium py-3.5 w-32 text-center cursor-pointer">
+                  <Link to="/create-profile">I'll do it later</Link>
+                </button>
+              </div>
+            </div>
+            // </div>
           )}
         </Fragment>
       )}
@@ -60,4 +83,6 @@ const mapStateToProps = (state) => ({
   profile: state.profile,
 });
 
-export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(Dashboard);
+export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(
+  Dashboard
+);

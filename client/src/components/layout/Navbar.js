@@ -6,9 +6,21 @@ import { logout } from "../../actions/auth";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul className="flex justify-center w-full absolute left-0 w-full text-center text-quinary gap-x-10 text-lg">
+    <ul className="text-center text-quinary gap-x-16 text-lg flex items-center">
       <li>
-        <Link onClick={logout} to="#!">
+        <button
+          className="button text-white origin-left rounded-lg font-medium py-2.5 w-20 text-center text-base cursor-pointer"
+          type="submit"
+        >
+          <Link to="/posts">Posts</Link>
+        </button>
+      </li>
+      <li>
+        <Link
+          className="redirect-btn relative transition-all duration-300 text-xl text-quinary font-medium hover:text-secondary"
+          onClick={logout}
+          to="#!"
+        >
           Logout
         </Link>
       </li>
@@ -25,11 +37,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <header className="absolute w-full">
-      <nav className="relative w-full text-white px-24 py-4 flex justify-between w-full">
+      <nav className="relative w-full text-white px-24 py-4 flex justify-between items-center w-full">
         <div className="logo text-5xl">
           <Link to="/">devcom</Link>
         </div>
-        { !loading && (<Fragment>{ isAuthenticated && authLinks }</Fragment>)}
+        {!loading && <Fragment>{isAuthenticated && authLinks}</Fragment>}
       </nav>
     </header>
   );

@@ -119,7 +119,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           Already have an account?{" "}
           <Link
             to="/login"
-            className="redirect-btn relative transition-all duration-300 text-quinary font-semibold hover:text-primary"
+            className="redirect-btn relative transition-all duration-300 text-lg text-quinary font-medium hover:text-secondary"
           >
             Sign In
           </Link>
